@@ -1,0 +1,257 @@
+.pc{
+    display: none;
+}
+/* 헤더 */
+.My{
+    position: relative;
+}
+.HeaderWrap{
+    position: relative;
+    color: #000;
+}
+.Header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    margin-bottom: 10px;
+    z-index: 500;
+    background-color: #fff;
+}
+.Header.wh{
+    background-color: #fff;
+    border-bottom: 1px solid #cdcdcd;
+}
+.HeaderLogo{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+.HeaderWrap .iconmo{
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    right: 40px;
+    top: 25px;
+    background-image: url(../../public/img/icon_menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -99999px;
+}
+.mobmenu{
+    position: absolute;
+    right: 0;
+    top : 80px;
+    display: none;
+}
+.mobmenu > .menuCate{
+    width: 150px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 2em;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #c9c9c9;
+}
+/* 배경화면 */
+.bgImg {
+    position: relative;
+    background-color: #000;
+}
+.bgImg img{
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+.myName, .myTitle{
+    position: absolute;
+    left: 6vw;
+    z-index: 400;
+    font-weight: 700;
+}
+.myName{
+    bottom: 14vh;
+    color: #fff;
+    font-size: 1.6em;
+}
+.myTitle{
+    bottom: 6vh;
+    color: #FFD43A;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+/* 자아심상 */
+.content{
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.contentTitle{
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.contentTitle::before{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 25px;
+    background-color: #FF7A00;
+    margin-right: 10px;
+    vertical-align: top;
+    margin-top: 2px;
+}
+.myCatch{
+    font-size: 15px;
+}
+.myCatch .bold{
+    font-weight: 700;
+}
+.myKindly{
+    text-align: center;
+}
+.myKindly img{
+    width: 80%;
+    height: auto;
+}
+/* 나의 스킬 */
+.mySkill{
+    background-color: #FFD43A;
+    padding: 10px 20px 30px 20px ;
+}
+.skillFlex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skillFlex > div{
+    width: 25%;
+    height: auto;
+    box-sizing: border-box;
+    padding-right: 8px;
+    margin-bottom: 20px;
+}
+.skillFlex > div > img{
+    width: 100%;
+    height: auto;
+}
+.skillFlex .react, .skillFlex .figma {
+    width: 50%;
+    margin-bottom: 0;
+}/* 모바일 마지막 */
+
+@media screen and (min-width:768px){
+    .mo {
+        display: none;
+    }
+    .pc {
+        display: block;
+    }
+    .Header{
+        height: 0;
+    }
+    .Header.wh{
+        height: 80px;
+    }
+    .HeaderLogo{
+        position: absolute;
+        left: 3vw;
+        top: 0;
+        color: #fff;
+    }
+    .HeaderLogo.wh{
+        color: #000;
+    }
+    .headerMenu{
+        position: fixed;
+        width: 500px;
+        right: 20px;
+        top: 0;
+        z-index: 500;
+    }
+    .menuIn{
+        position: absolute;
+        top: 3vh;
+        display: flex;
+        z-index: 700;
+    }
+    .menuCate{
+        position: relative;
+        color: #000;
+        font-size: 1.3em;
+        font-weight: 500;
+        text-align: center;
+        margin-right: 20px;
+    }
+    .menuIn.wh .menuCate{
+        color: #fff;
+    }
+    .menuCate::after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: 0.3s;
+        background-color: #FF7A00;
+    }
+    .menuCate:hover::after{
+        width: 100%;
+    }
+    .content{
+        padding: 0 40px;
+    }
+    .myKindly img{
+        width: 35%;
+        margin: 30px 0;
+    }
+    .mySkill{
+        padding: 20px 40px 0 40px;
+    }
+    .skillFlex{
+        padding: 30px 80px 40px 80px;
+    }
+    .skillFlex > div{
+        width: 20%;
+        padding: 0 15px;
+    }
+    .skillFlex .react, .skillFlex .figma{
+        width: 20%;
+    }
+} /* 768px 마지막 */
+@media screen and (min-width:1440px){
+    .content{
+        padding: 0 150px;
+    }
+    .mySkill{
+        padding: 30px 0 0 150px;
+    }
+    .myCatch{
+        font-size: 1.3em;
+    }
+    .myKindly img{
+        width: 25%;
+    }
+    .myName, .myTitle{
+        left: 8vw;
+    }
+    .myName{
+        font-size: 2.5em;
+        bottom: 18vw;
+    }
+    .myTitle{
+        font-size: 2.2em;
+        bottom: 11vw;
+    }
+    .skillFlex{
+        padding: 10px 80px 20px 80px;
+    }
+    .skillFlex > div, .skillFlex .react, .skillFlex .figma{
+        width: 10%;
+    }
+    
+}/* 1440px 마지막*/

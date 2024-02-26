@@ -1,0 +1,98 @@
+.pconly{
+    display: none;
+}
+.Project{
+    padding: 0 20px;
+}
+.pjName{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.pjImg{
+    margin-bottom: 30px;
+}
+.pjImg img{
+    width: 100%;
+    height: auto;
+}
+@media screen and (min-width:768px){
+    .regular{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pjWrap{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+}/* 768px 마지막 */
+@media screen and (min-width:1440px){
+    .pconly{
+        display: block;
+    }
+    .subjectWrap > div{
+        width: 70%;
+    }
+    .pjWrap{
+        position: relative;
+    }
+    .Project{
+        padding: 0 150px;
+    }
+    .pjName{
+        display: none;
+    }
+    .Project .contentTitle{
+        margin-bottom: 40px;
+    }
+    .pjName{
+        font-size: 1.3em;
+    }
+    .subjectWrap{
+        display: flex;
+        justify-content: center;
+    }
+    .pjImg{
+        position: relative;
+    }
+    .btnName{
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+    .on{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: 0.4s;
+    }
+    .on button{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        top: 40%;
+        color: #fff;
+        padding: 11px 80px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+    }
+    .on:hover{
+        opacity: 1;
+    }
+    .sliderBtn img{
+        width: 100%;
+        height: auto;
+    }
+    .slick-dots{
+        left: 0;
+        right: 0;
+        bottom: -10px;
+    }   
+    .slick-dots li{
+        width: 10%;
+    }
+}/* 1440px 마지막*/

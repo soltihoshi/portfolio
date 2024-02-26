@@ -1,0 +1,20 @@
+.certificate{
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+.cerList li{
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+}
+.listBold{
+    font-weight: 700;
+}
+@media screen and (min-width:768px){
+
+} /* 768px 마지막 */
+@media screen and (min-width:1440px){
+    .certificate{
+        padding: 0 150px;
+    }
+} /* 1440px 마지막*/
