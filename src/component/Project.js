@@ -21,13 +21,11 @@ const Project = () => {
         setProjectselect(project);
     };
 
-    const baseUrl = '/img'
-    
     const settings = {
         customPaging: function(i) {
         return (
             <a className="sliderBtn">
-            <img src={`${baseUrl}/project_0${i + 1}.png`} />
+            <img src={`img/project_0${i+1}.png`} />
             </a>
         );
         },
