@@ -30,7 +30,7 @@ const projectText = [
         feel : '나를 소개한다는 것은 언제나 어렵습니다. 보이지 않는 자료를 객관적으로 판단하는 일을 해야 했고 또 그것을 타인에게 전달하기 위해 고심해야 했습니다. 이 과정에서 주변사람들이 보는 나에 대한 얘기를 들을 수 있었고, 많은 사랑을 느끼며 자신감을 얻을 수 있는 시간이었습니다.',
         member : '1',
         url : 'https://kmjportfolio.web.app',
-        git : ''
+        git : 'https://github.com/soltihoshi/portfolio'
     },
     {
         id : 2,

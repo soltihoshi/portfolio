@@ -30,7 +30,7 @@ const ProjectModal = ({id, name, img, goal, aim, use, feel, setIsmodal, member, 
                     <div className="pjLink">
                         <p className="textTitle">배포링크</p>
                         <div className="textContent">
-                            <p>&nbsp;&nbsp;깃 : </p>
+                            <p>&nbsp;&nbsp;깃 : <a href={git}>{git}</a></p>
                             <p>&nbsp;&nbsp;배포 : <a href={url}>{url}</a></p>
                         </div>
                     </div>
