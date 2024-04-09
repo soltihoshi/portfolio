@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -14,6 +14,7 @@ const Project = () => {
 
     const [ismodal, setIsmodal] = useState(false); 
     const [projectselect, setProjectselect] = useState({}); 
+    const modalRef = useRef();
 
 
     const opneModal = (project) => {
@@ -21,11 +22,23 @@ const Project = () => {
         setProjectselect(project);
     };
 
+    useEffect(()=>{
+        const outsideClick = (e) =>{
+            if (ismodal === true && modalRef.current && !modalRef.current.contains(e.target)){
+                setIsmodal(false);
+            }
+        };
+        document.addEventListener("click",outsideClick);
+        return()=>{
+            document.removeEventListener("click",outsideClick)
+        }
+    },[ismodal]);
+
     const settings = {
         customPaging: function(i) {
         return (
             <a className="sliderBtn">
-            <img src={`img/project_0${i+1}.png`} />
+            <img src={`img/project_0${i}.png`} />
             </a>
         );
         },
@@ -46,7 +59,7 @@ const Project = () => {
           breakpoint: 99999,
           settings: settings,
         },
-      ];
+    ];
 
     return(
         <div className="Project">
@@ -69,7 +82,7 @@ const Project = () => {
                     }
                 </Slider>
             </div>
-            {ismodal && <ProjectModal {...projectselect} setIsmodal={setIsmodal}/>}
+            {ismodal && <ProjectModal {...projectselect} setIsmodal={setIsmodal} ref={modalRef}/>}
         </div>
     );
 };

@@ -1,11 +1,23 @@
+import { useRef } from 'react';
 import '../component/ProjectModal.css';
 
-const ProjectModal = ({id, name, img, goal, aim, use, feel, setIsmodal, member, url, git}) => 
-{
+const ProjectModal = ({id, name, img, goal, aim, use, feel, setIsmodal, member, url, git}) => {
+
+    const modalRef = useRef();
+
+    const outsideClick = (e) => {
+        if (e.target !== modalRef.current){
+            setIsmodal(false);
+        }
+    };
+    const stopEP = (e) => {
+        e.stopPropagation();
+    };
+
     return(
         <div className="ProjectModal">
-            <div className="pjmWrap">
-                <div className="pjContent">
+            <div className="pjmWrap" onClick={outsideClick}>
+                <div className="pjContent"ref={modalRef} onClick={stopEP}>
                     <p className="name">{name}</p>
                     <div className="modalImg">
                         <img src={img}/>
